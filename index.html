@@ -1,0 +1,17 @@
+<html ng-app="cusApp" ng-controller="cusMainController" lang="en" dir="ltr">
+  <script src="/assets/angular/angular.js" charset="utf-8"></script>
+  <script src="/app/app.module.js" charset="utf-8"></script>
+  <script src="/app/app.route.js" charset="utf-8"></script>
+  <script src="/app/components/customer/customerController.js" charset="utf-8"></script>
+  <script src="assets/angular/angular-route.js" charset="utf-8"></script>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Cusapp - Pelanggan</title>
+  </head>
+  <body>
+    <div ng-include="'/app/components/customer/customerView.html'" ng-controller='customerController'>
+
+    </div>
+  </body>
+</html>
