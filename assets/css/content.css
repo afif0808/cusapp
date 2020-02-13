@@ -1,0 +1,126 @@
+.box {
+  padding: 5px;
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+}
+.content {
+  float: left;
+  margin-left: 230px;
+  margin-top: 30px;
+  width: 80%;
+}
+.searchBox {
+  box-shadow: 2px 2px 8px  #ccc;
+  width: 500px;
+  background: #fff;
+  float: left;
+  padding: 12px 12px 12px 20px;
+  color: #455A64;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 100px;
+  border: solid 1px #ccc;
+}
+
+::placeholder {
+  color: #455A64;
+}
+
+.container {
+  float: left;
+  width: 50%;
+  /* background: #f00; */
+  margin-bottom: 100px;
+}
+.tbl-vertical-v1 {
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: roboto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 2px 2px 8px 2px #ccc;
+  float: left;
+}
+
+.tbl-vertical-v1 td {
+  padding: 10px 20px 10px 20px ;
+  margin: 5px;
+  border-bottom: solid 1px #ccc;
+  color: #455A64;
+}
+
+
+.tbl-horizontal-v1 {
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: roboto;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 2px 2px 8px 2px #ccc;
+  float: left;
+  width: 100%;
+}
+
+.tbl-horizontal-v1 td.caption {
+  font-weight: bolder;
+  border-bottom: solid 1px #ccc;
+}
+
+.tbl-horizontal-v1 td {
+  padding: 10px 20px 10px 20px ;
+  margin: 5px;
+  border-bottom: solid 1px #ccc;
+  color: #455A64;
+}
+
+
+.btn-medium-v1 {
+  color:#03A9F4;
+  padding: 8px;
+  font-size: 20px;
+  border:none;
+  background: none;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+.btn-medium-v2 {
+  color:#fff;
+  padding: 4px;
+  font-size: 13px;
+  border:none;
+  background: #03A9F4;
+  border-radius: 2px;
+  font-weight: bolder;
+}
+.blackScreen {
+  position: fixed;
+  width: 100%;
+  height: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-v1 {
+  width: 650px;
+	height: 130px;
+	background-color: #fff;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  padding: 10px;
+  border-radius: 5px;
+	margin: auto;
+}
+.customerList .selectedItem {
+  background: #e8ecff;
+}
+.customerList .selectedItem td {
+  color: #03A9F4;
+  font-weight: bold;
+}

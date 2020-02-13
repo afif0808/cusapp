@@ -1,0 +1,55 @@
+.leftside {
+  width: 200px;
+  height: 2000px;
+  position: fixed;
+  box-shadow: 2px 2px 8px #ccc;
+  background: #455A64;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.primaryColorBackground {
+  background: #fff;
+}
+.darkPrimaryColorBackground {
+  background: #fff;
+}
+.textColor {
+  color: #455A64;
+}
+
+.boldFont {
+  font-weight: bold;
+}
+
+.robotoFont {
+  font-family: roboto;
+}
+.menu {
+
+}
+.menu .item{
+  margin: 20px;
+  list-style-type: none;
+  padding: 10px;
+  color: #fff;
+
+}
+
+.menu .item a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+  font-family: Roboto
+}
+
+.fontSize20px {
+  font-size: 20px;
+}
+.fontSize18px {
+  font-size: 18px;
+}
