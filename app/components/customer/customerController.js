@@ -6,7 +6,9 @@ app.controller('customerController',function($http,$scope){
  $scope.customers = []
  $scope.nextCustomersURL = ""
  $scope.previousCustomersURL = ""
- $scope.customersAPIURL = "http://localhost:444/api/customers"
+ $scope.customersCountPerList = 4;
+ $scope.customersAPIURL = $scope.$parent.customersAPIURL + "?limit=" + $scope.customersCountPerList
+ $scope.siteURL = $scope.$parent.siteURL
  /**
    * Get customer resource from customers API
    * @param {string} customer - customer resource API url
@@ -21,14 +23,25 @@ app.controller('customerController',function($http,$scope){
 
  /**
    * Search for customers from customers API with 'getCustomers()' function
-   * then do getCustomers()
    * @param {string} keyword - search keyword
  */
- $scope.searchCustomers = function(customersResourceURL,keyword) {
-   $scope.getCustomers(customersResourceURL+"?s="+keyword)
+ $scope.searchCustomers = function(keyword) {
+   $scope.getCustomers($scope.customersAPIURL+"&s="+keyword)
+ }
+ /**
+   * Get next customer list .
+   * redirect to default route.
+ */
+ $scope.getNextCustomersList = function() {
+   window.location.href=$scope.siteURL
+   $scope.getCustomers($scope.nextCustomersURL)
  }
 
- $scope.getNextListCustomers = function() {}
- $scope.getPreviousListCustomers = function(){}
-
+ /**
+   * Get previous customer list .
+   * redirect to default route.
+ */
+ $scope.getPreviousCustomersList = function(){}
+  window.location.href=$scope.siteURL
+  $scope.getCustomers($scope.previousCustomersURL)
 })

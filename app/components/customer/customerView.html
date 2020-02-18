@@ -1,3 +1,10 @@
 <div class="" >
   <li ng-repeat="c in customers">{{c.name}}</li>
 </div>
+
+<form class="" ng-submit="searchCustomers(customerSearchQuery)" >
+  <input type="text" ng-model="customerSearchQuery"  name="" value="">
+</form>
+
+<button ng-click="getNextCustomersList()" ng-if="nextCustomersURL != ''" type="button" name="button">Next</button>
+<button ng-click="getPreviousCustomersList()"  ng-if="previousCustomersURL != ''" type="button" name="button">Previous</button>
