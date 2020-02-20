@@ -6,13 +6,14 @@ app.controller('customerController',function($http,$scope){
  $scope.customers = []
  $scope.nextCustomersURL = ""
  $scope.previousCustomersURL = ""
- $scope.customersCountPerList = 4;
- $scope.customersAPIURL = $scope.$parent.customersAPIURL + "?limit=" + $scope.customersCountPerList
- $scope.siteURL = $scope.$parent.siteURL
+ $scope.customersLimit = 4;
+ $scope.customersAPIURL = $scope.$parent.customersAPIURL + "?limit=" + $scope.customersLimit
+ $scope.customersAPPURL = $scope.$parent.customersAPPURL
  /**
    * Get customer resource from customers API
    * @param {string} customer - customer resource API url
  */
+ $scope.res
  $scope.getCustomers = function(customerURL) {
    $http.get(customerURL).then(function(res){
      $scope.customers = res.data.result
@@ -33,15 +34,16 @@ app.controller('customerController',function($http,$scope){
    * redirect to default route.
  */
  $scope.getNextCustomersList = function() {
-   window.location.href=$scope.siteURL
    $scope.getCustomers($scope.nextCustomersURL)
+   window.location.href=$scope.customersAPPURL
  }
 
  /**
    * Get previous customer list .
    * redirect to default route.
  */
- $scope.getPreviousCustomersList = function(){}
-  window.location.href=$scope.siteURL
-  $scope.getCustomers($scope.previousCustomersURL)
+ $scope.getPreviousCustomersList = function(){
+   $scope.getCustomers($scope.previousCustomersURL)
+   window.location.href=$scope.customersAPPURL
+ }
 })

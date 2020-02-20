@@ -1,10 +1,52 @@
-<div class="" >
-  <li ng-repeat="c in customers">{{c.name}}</li>
+<h3 class="mb-2">Pelanggan</h3>
+<div class="row">
+  <div class="col-md-6">
+    <form ng-submit="searchCustomers(customerSearchKeyword)" class="form-inline" >
+      <input type="search" ng-model="customerSearchKeyword" class="form-control mr-sm-2 mt-2" placeholder="Cari Pelanggan">
+      <button type="submit"  class="btn btn-outline-primary mt-2" >Cari</button>
+    </form>
+  </div>
+  <div class="col-md-6 d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-primary" name="button">Tambah</button>
+  </div>
+
 </div>
+<div ng-if="customers == null" class="alert alert-warning mt-3 ">
+  Tidak ditemukan pelanggan
+</div>
+<table ng-if="customers.length > 0" class="table mt-2">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th class="w-40" scope="col">Nama</th>
+      <th class="w-20" scope="col">Terdaftar</th>
+      <th class="w-40"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="c in customers">
+      <th>{{$index +1}}</th>
+      <td>{{c.name}}</td>
+      <td>12/12/2012</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary mb-2" name="button">Ubah</button>
+        <button type="button" class="btn btn-outline-primary mb-2" name="button">Lihat</button>
+      </td>
+    </tr>
+    <tr ng-if="previousCustomersURL != '' || nextCustomersURL != ''">
+      <td colspan="100%">
+        <button ng-click="getNextCustomersList()"
+        type="button"
+        ng-if="nextCustomersURL != ''"
+        class="btn btn-outline-primary mb-2 position-absolute"
+        style="">Next</button>
 
-<form class="" ng-submit="searchCustomers(customerSearchQuery)" >
-  <input type="text" ng-model="customerSearchQuery"  name="" value="">
-</form>
-
-<button ng-click="getNextCustomersList()" ng-if="nextCustomersURL != ''" type="button" name="button">Next</button>
-<button ng-click="getPreviousCustomersList()"  ng-if="previousCustomersURL != ''" type="button" name="button">Previous</button>
+        <button ng-click="getPreviousCustomersList()"
+        type="button"
+        ng-if="previousCustomersURL != ''"
+        class="btn btn-outline-primary mb-2 position-absolute"
+        style="left:100px;">Previous</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

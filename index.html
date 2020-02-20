@@ -1,17 +1,53 @@
+<!doctype html>
 <html ng-app="cusApp" ng-controller="cusMainController" lang="en" dir="ltr">
-  <script src="/assets/angular/angular.js" charset="utf-8"></script>
-  <script src="/app/app.module.js" charset="utf-8"></script>
-  <script src="/app/app.route.js" charset="utf-8"></script>
-  <script src="/app/components/customer/customerController.js" charset="utf-8"></script>
-  <script src="assets/angular/angular-route.js" charset="utf-8"></script>
-
   <head>
+    <script src="/assets/angular/angular.js" charset="utf-8"></script>
+    <script src="/app/app.module.js" charset="utf-8"></script>
+    <script src="/app/app.route.js" charset="utf-8"></script>
+    <script src="/app/components/customer/customerController.js" charset="utf-8"></script>
+    <script src="assets/angular/angular-route.js" charset="utf-8"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
+
+    <link rel="stylesheet" href="/assets/bootstrap4/dist/css/bootstrap.min.css">
+
     <title>Cusapp - Pelanggan</title>
   </head>
   <body>
-    <div ng-include="'/app/components/customer/customerView.html'" ng-controller='customerController'>
+    <div class="header">
+
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a href="#" class="navbar-brand">SAMASE</a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Pelanggan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pengiriman</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pengaturan</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-12 m-2" ng-view>
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </body>
 </html>
+
+<style media="screen">
+  body {
+  }
+</style>
