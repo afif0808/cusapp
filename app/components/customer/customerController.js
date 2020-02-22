@@ -1,4 +1,4 @@
-app.controller('customerController',function($http,$scope){
+app.controller('CustomerController',function($http,$scope){
   $scope.$on('$routeChangeSuccess', function($event, next, current) {
     $scope.getCustomers($scope.customersAPIURL)
    });
@@ -47,4 +47,8 @@ app.controller('customerController',function($http,$scope){
    $scope.getCustomers($scope.previousCustomersURL)
    window.location.href=$scope.customersAPPURL
  }
+ $scope.goToAddCustomerPage = function() {
+    location.href="#!/pelanggan/tambah"
+ }
+
 })

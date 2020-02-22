@@ -1,0 +1,33 @@
+<h3 class="mb-2">Tambah Pelanggan</h3>
+<form class="" ng-submit="addCustomer()">
+  <table class="table mt-2">
+    <tbody>
+      <tr>
+        <th>Nama</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" required ng-model="newCustomersName" class="form-control" placeholder="Masukan nama">
+        </td>
+      </tr>
+
+      <tr>
+        <th>Informasi</th>
+      </tr>
+      <tr>
+        <td>
+          <textarea class="form-control" required ng-model="newCustomersInformation"  rows="8" placeholder="Masukan informasi" ></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button type="submit" class="btn btn-primary m-2" name="button">Tambah</button>
+          <button type="button" class="btn btn-outline-primary mr-3" name="button">Batal</button>
+          <ui-view></ui-view>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</form>

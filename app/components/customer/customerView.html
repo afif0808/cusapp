@@ -7,7 +7,7 @@
     </form>
   </div>
   <div class="col-md-6 d-flex justify-content-end">
-    <button type="button" class="btn btn-outline-primary" name="button">Tambah</button>
+    <button ng-click="goToAddCustomerPage()"  class="btn btn-outline-primary" role="button">Tambah</button>
   </div>
 
 </div>
@@ -27,7 +27,7 @@
     <tr ng-repeat="c in customers">
       <th>{{$index +1}}</th>
       <td>{{c.name}}</td>
-      <td>12/12/2012</td>
+      <td>{{c.date_added}}</td>
       <td>
         <button type="button" class="btn btn-outline-primary mb-2" name="button">Ubah</button>
         <button type="button" class="btn btn-outline-primary mb-2" name="button">Lihat</button>
