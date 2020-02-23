@@ -2,10 +2,17 @@
 <html ng-app="cusApp" ng-controller="cusMainController" lang="en" dir="ltr">
   <head>
     <script src="/assets/angular/angular.js" charset="utf-8"></script>
+
     <script src="/app/app.module.js" charset="utf-8"></script>
     <script src="/app/app.route.js" charset="utf-8"></script>
+    <script src="/app/app.state.js" charset="utf-8"></script>
+
+
     <script src="/app/components/customer/customerController.js" charset="utf-8"></script>
     <script src="/app/components/addCustomer/addCustomerController.js" charset="utf-8"></script>
+    <script src="/app/components/viewCustomer/viewCustomerController.js" charset="utf-8"></script>
+    <script src="/app/components/editCustomer/editCustomerController.js" charset="utf-8"></script>
+
 
     <script src="assets/angular/angular-route.js" charset="utf-8"></script>
     <script src="assets/angular/ui-router/angular-ui-router.min.js" charset="utf-8"></script>
@@ -13,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/assets/bootstrap4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap-4.4.1/dist/css/bootstrap.min.css">
 
     <title>Cusapp - Pelanggan</title>
   </head>
@@ -24,22 +31,31 @@
           <a href="/" class="navbar-brand">SAMASE</a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Pelanggan</a>
+              <a class="nav-link" href="#!/">Pelanggan</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#">Pengiriman</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pengaturan</a>
+              <a class="nav-link" href="#">Pengaturan
+              </a>
             </li>
           </ul>
+          <div class="col-md-6 d-flex justify-content-end">
+            <button ng-click="goToAddCustomerPage()"  class="btn btn-outline-primary mr-5" role="button">
+              Tambah Pelanggan
+            </button>
+            <button type="button" class="btn btn-link mr-2" name="button">Afif0808</button>
+            <button type="button" class="btn btn-outline-primary mr-2" name="button">Logout</button>
+          </div>
+
         </div>
       </nav>
 
       <div class="container mt-2">
         <div class="row">
           <div class="col-md-12 m-2" ng-view>
-
           </div>
         </div>
 

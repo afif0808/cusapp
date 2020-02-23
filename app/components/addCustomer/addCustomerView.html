@@ -7,7 +7,7 @@
       </tr>
       <tr>
         <td>
-          <input type="text" required ng-model="newCustomersName" class="form-control" placeholder="Masukan nama">
+          <input type="text" required ng-model="newCustomerName" class="form-control" placeholder="Masukan nama">
         </td>
       </tr>
 
@@ -16,14 +16,14 @@
       </tr>
       <tr>
         <td>
-          <textarea class="form-control" required ng-model="newCustomersInformation"  rows="8" placeholder="Masukan informasi" ></textarea>
+          <textarea class="form-control" required ng-model="newCustomerInformation"  rows="8" placeholder="Masukan informasi" ></textarea>
         </td>
       </tr>
 
       <tr>
         <td>
           <button type="submit" class="btn btn-primary m-2" name="button">Tambah</button>
-          <button type="button" class="btn btn-outline-primary mr-3" name="button">Batal</button>
+          <button type="button" onclick="window.history.back()" class="btn btn-outline-primary mr-3" name="button">Batal</button>
           <ui-view></ui-view>
         </td>
       </tr>

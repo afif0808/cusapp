@@ -1,0 +1,44 @@
+<table class="table ">
+  <tbody>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-outline-primary" onclick="window.history.back()">
+          Kembali
+        </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button type="button" class="btn btn-primary m-2" name="button">Cetak SIP</button>
+        <button type="button" class="btn btn-primary m-2" name="button">Cetak Surat Jalan</button>
+        <button type="button" ng-click="goToEditCustomerPage(selectedCustomer)" class="btn btn-primary m-2" name="button">Ubah</button>
+        <button type="button" class="btn btn-outline-primary m-2" name="button">Hapus</button>
+
+      </td>
+    </tr>
+
+
+
+
+    <tr>
+      <th class="h3">{{selectedCustomer.name}}</th>
+    </tr>
+    <tr>
+      <td class="text-secondary">
+        <em>
+        Terdaftar: {{selectedCustomer.date_added}}
+        </em>
+      </td>
+    </tr>
+    <tr>
+      <th>Informasi</th>
+    </tr>
+    <tr>
+      <td>
+        <p style="white-space: pre-wrap;" ng-bind="selectedCustomer.information">
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>

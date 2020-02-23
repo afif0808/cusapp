@@ -6,9 +6,6 @@
       <button type="submit"  class="btn btn-outline-primary mt-2" >Cari</button>
     </form>
   </div>
-  <div class="col-md-6 d-flex justify-content-end">
-    <button ng-click="goToAddCustomerPage()"  class="btn btn-outline-primary" role="button">Tambah</button>
-  </div>
 
 </div>
 <div ng-if="customers == null" class="alert alert-warning mt-3 ">
@@ -25,12 +22,12 @@
   </thead>
   <tbody>
     <tr ng-repeat="c in customers">
-      <th>{{$index +1}}</th>
+      <th>{{pageNumber * customersLimit + $index +1}}</th>
       <td>{{c.name}}</td>
       <td>{{c.date_added}}</td>
       <td>
-        <button type="button" class="btn btn-outline-primary mb-2" name="button">Ubah</button>
-        <button type="button" class="btn btn-outline-primary mb-2" name="button">Lihat</button>
+        <button type="button" class="btn btn-outline-primary mb-2" ng-click="goToEditCustomerPage(c)" >Ubah</button>
+        <button type="button" class="btn btn-outline-primary mb-2" ng-click="viewCustomer(c)" name="button">Lihat</button>
       </td>
     </tr>
     <tr ng-if="previousCustomersURL != '' || nextCustomersURL != ''">

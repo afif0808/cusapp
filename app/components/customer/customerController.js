@@ -6,6 +6,7 @@ app.controller('CustomerController',function($http,$scope){
  $scope.nextCustomersURL = ""
  $scope.previousCustomersURL = ""
  $scope.customersLimit = 4;
+ $scope.pageNumber = 0
  $scope.customersAPIURL =  "http://localhost:444/api/customers?limit=" + $scope.customersLimit
  $scope.customersAPPURL = $scope.$parent.customersAPPURL
  /**
@@ -28,6 +29,10 @@ app.controller('CustomerController',function($http,$scope){
    * @param {string} keyword - search keyword
  */
  $scope.searchCustomers = function(keyword) {
+   $scope.pageNumber = 0
+   if(keyword == null || keyword == 'undefined') {
+     keyword = ""
+   }
    $scope.getCustomers($scope.customersAPIURL+"&s="+keyword)
  }
  /**
@@ -36,6 +41,7 @@ app.controller('CustomerController',function($http,$scope){
  */
  $scope.getNextCustomersList = function() {
    $scope.getCustomers($scope.nextCustomersURL)
+   $scope.pageNumber++
    window.location.href=$scope.customersAPPURL
  }
 
@@ -45,10 +51,28 @@ app.controller('CustomerController',function($http,$scope){
  */
  $scope.getPreviousCustomersList = function(){
    $scope.getCustomers($scope.previousCustomersURL)
+   $scope.pageNumber--
    window.location.href=$scope.customersAPPURL
+
  }
- $scope.goToAddCustomerPage = function() {
-    location.href="#!/pelanggan/tambah"
+
+ /**
+   * Redirects to ViewCustomer page
+   * @param{object} selectedCustomer - object of customer that to be viewed
+ */
+ $scope.viewCustomer = function(selectedCustomer) {
+   sessionStorage.setItem("selectedCustomer",JSON.stringify(selectedCustomer))
+   window.location.href="#!/pelanggan/lihat"
  }
+
+ /**
+   * Redirects to EditCustomer page
+   * @param{object} selectedCustomer - object of customer that to be edited
+ */
+ $scope.goToEditCustomerPage = function(selectedCustomer) {
+   sessionStorage.setItem("selectedCustomer",JSON.stringify(selectedCustomer))
+   window.location.href="#!/pelanggan/ubah"
+ }
+
 
 })

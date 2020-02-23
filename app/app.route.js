@@ -7,20 +7,13 @@ app.config(function($routeProvider) {
   .when("/pelanggan/tambah", {
     templateUrl : "/app/components/addCustomer/addCustomerView.html",
     controller : "AddCustomerController"
-  });
+  })
+  .when("/pelanggan/lihat", {
+    templateUrl : "/app/components/viewCustomer/viewCustomerView.html",
+    controller : "ViewCustomerController"
+  })
+  .when("/pelanggan/ubah", {
+    templateUrl : "/app/components/editCustomer/editCustomerView.html",
+    controller : "EditCustomerController"
+  })
 });
-
-app.config(function($stateProvider){
-  var defaultState = {
-    name : 'addCustomerDefault',
-    url : '/pelanggan/tambah',
-    template : ""
-  }
-  var addCustomerSuccess = {
-    name : 'addCustomerSuccess',
-    url : '/pelanggan/tambah',
-    template : "<span class='alert alert-success'>Pelanggan baru berhasil ditambahkan</span>"
-  }
-  $stateProvider.state(defaultState)
-  $stateProvider.state(addCustomerSuccess)
-})
