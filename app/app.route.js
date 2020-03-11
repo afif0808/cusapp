@@ -16,4 +16,13 @@ app.config(function($routeProvider) {
     templateUrl : "/app/components/editCustomer/editCustomerView.html",
     controller : "EditCustomerController"
   })
+  .when("/pengaturan", {
+    templateUrl : "/app/components/setting/settingView.html",
+    controller : "SettingController"
+  })
+  .when("/pengiriman/label", {
+    templateUrl : "/app/components/shippingLabel/shippingLabelView.html",
+    controller : "ShippingLabelController"
+  });
+
 });

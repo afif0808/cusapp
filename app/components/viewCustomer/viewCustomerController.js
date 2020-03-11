@@ -1,12 +1,18 @@
 app.controller('ViewCustomerController',function($scope,$http,$state){
   $scope.selectedCustomer = JSON.parse(sessionStorage.getItem('selectedCustomer'))
   /**
-    * Redirects to EditCustomer page
-    * @param{object} selectedCustomer - object of customer that to be edited
+    * Redirect to customer's shipping label page
   */
-  $scope.goToEditCustomerPage = function(selectedCustomer) {
-    sessionStorage.setItem("selectedCustomer",JSON.stringify(selectedCustomer))
+  $scope.goToShippingLabelPage = function() {
+    window.location.href="#!/pengiriman/label"
+  }
+
+  /**
+    * Redirects to EditCustomer page
+  */
+  $scope.goToEditCustomerPage = function() {
     window.location.href="#!/pelanggan/ubah"
   }
+
 
 })

@@ -47,6 +47,38 @@ function setEditCustomerState($stateProvider) {
   $stateProvider.state(editCustomerLoading)
 }
 
+/**
+  * set states for Setting component
+  * @param {object} $stateProvider - to get access to $stateProvider
+*/
+function setSettingState($stateProvider) {
+  var settingDefault =  {
+    name : 'settingDefault',
+    url : '/pengaturan'
+  }
+  var settingEditCompanyInformationSuccess = {
+    name : 'settingEditCompanyInformationSuccess',
+    url : '/pengaturan',
+    template : "<div class='alert alert-success'>Informasi perusahaan berhasil diubah</div>"
+  }
+  $stateProvider.state(settingDefault)
+  $stateProvider.state(settingEditCompanyInformationSuccess)
+
+}
+
+/**
+  * set states for shipmentInformation component
+  * @param {object} $stateProvider - to get access to $stateProvider
+*/
+function setShipmentInformationState($stateProvider) {
+  var shipmentInformationDefault =  {
+    name : 'shipmentInformationDefault',
+    url : '/pengiriman/sip'
+  }
+  $stateProvider.state(shipmentInformationDefault)
+}
+
+
 app.config(function($stateProvider){
   var defaultState = {
     name : 'defaultState',
@@ -55,4 +87,6 @@ app.config(function($stateProvider){
   $stateProvider.state(defaultState)
   setAddCustomerState($stateProvider)
   setEditCustomerState($stateProvider)
+  setSettingState($stateProvider)
+  setShipmentInformationState($stateProvider)
 })

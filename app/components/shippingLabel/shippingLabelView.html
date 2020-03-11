@@ -1,0 +1,43 @@
+<h1 class="d-print-none mb-2">Alamat Pengiriman</h1>
+<hr>
+<div class="d-print-none">
+  <button type="button" onclick="window.history.back()" class="btn btn-outline-primary" name="button">Kembali</button>
+  <button type="button" class="btn btn-primary" onclick="window.print()" name="button">Cetak</button>
+  <hr>
+</div>
+<div class="d-none d-print-block text-center m-2">
+  <img src="/assets/images/logosamase.png" alt="">
+</div>
+<table class="table table-bordered ">
+  <tbody>
+    <tr>
+      <th class="display-4 font-weight-bold">Pengirim</th>
+    </tr>
+    <tr>
+      <td>
+        <h1 class="display-4">{{companyInformation.company_name}}</h1>
+        <h2 class="display-4">{{companyInformation.company_contact}}</h2>
+      </td>
+    </tr>
+    <tr>
+      <th class="display-4 font-weight-bold">Penerima</th>
+    </tr>
+    <tr>
+      <td>
+        <h1 class="display-4">{{selectedCustomer.name}}</h1>
+        <p style="white-space: pre-wrap;" class="display-4" ng-bind="selectedCustomer.information">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th class="display-4 font-weight-bold">Ekspedisi</th>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;<br>
+        &nbsp;
+      </td>
+
+    </tr>
+  </tbody>
+</table>

@@ -53,7 +53,6 @@ app.controller('CustomerController',function($http,$scope){
    $scope.getCustomers($scope.previousCustomersURL)
    $scope.pageNumber--
    window.location.href=$scope.customersAPPURL
-
  }
 
  /**
