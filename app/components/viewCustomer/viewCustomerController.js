@@ -13,6 +13,11 @@ app.controller('ViewCustomerController',function($scope,$http,$state){
   $scope.goToEditCustomerPage = function() {
     window.location.href="#!/pelanggan/ubah"
   }
-
+  /**
+    * Redirects to AddShipping page
+  */
+  $scope.goToAddShippingPage = function() {
+    $state.go('addShippingDefault')
+  }
 
 })

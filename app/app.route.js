@@ -23,6 +23,16 @@ app.config(function($routeProvider) {
   .when("/pengiriman/label", {
     templateUrl : "/app/components/shippingLabel/shippingLabelView.html",
     controller : "ShippingLabelController"
-  });
+  })
+  .when("/pengiriman/tambah", {
+    templateUrl : "/app/components/addShipping/addShippingView.html",
+    controller : "AddShippingController"
+  })
+  .when("/pengiriman/lihat", {
+    templateUrl : "/app/components/viewShipping/viewShippingView.html",
+    controller : "ViewShippingController"
+  })
+
+
 
 });

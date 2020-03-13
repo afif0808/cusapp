@@ -1,0 +1,38 @@
+<h3 class="mb-2">Tambah Pengiriman</h3>
+
+<table class="table mt-2">
+  <tr>
+    <th>Pelanggan</th>
+  </tr>
+  <tr>
+    <td>
+      {{selectedCustomer.name}}
+    </td>
+  </tr>
+
+  <tr>
+    <th>No Nota</th>
+  </tr>
+  <tr>
+    <td>
+      <input type="text" placeholder="Masukkan nomor nota" ng-model="shippingInvoice" class="form-control" name="" value="">
+    </td>
+  </tr>
+
+  <tr>
+    <th>Informasi Pengiriman</th>
+  </tr>
+  <tr>
+    <td>
+      <textarea name="name" placeholder="Contoh : 'Isi pakaian , berat 3 kg'" class="form-control" ng-model='shippingInformation' rows="5" ></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" ng-click="addShipping()" class="btn btn-primary" name="button">Simpan</button>
+      <button type="button" class="btn btn-outline-primary" onclick="window.history.back()" name="button">Batal</button>
+    </td>
+  </tr>
+
+
+</table>

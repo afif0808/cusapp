@@ -67,17 +67,16 @@ function setSettingState($stateProvider) {
 }
 
 /**
-  * set states for shipmentInformation component
+  * set states for AddShipping component
   * @param {object} $stateProvider - to get access to $stateProvider
 */
-function setShipmentInformationState($stateProvider) {
-  var shipmentInformationDefault =  {
-    name : 'shipmentInformationDefault',
-    url : '/pengiriman/sip'
+function setAddShippingState($stateProvider) {
+  var addShippingDefault = {
+    name : 'addShippingDefault',
+    url : '/pengiriman/tambah'
   }
-  $stateProvider.state(shipmentInformationDefault)
+  $stateProvider.state(addShippingDefault)
 }
-
 
 app.config(function($stateProvider){
   var defaultState = {
@@ -88,5 +87,5 @@ app.config(function($stateProvider){
   setAddCustomerState($stateProvider)
   setEditCustomerState($stateProvider)
   setSettingState($stateProvider)
-  setShipmentInformationState($stateProvider)
+  setAddShippingState($stateProvider)
 })
