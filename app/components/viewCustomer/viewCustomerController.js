@@ -20,4 +20,25 @@ app.controller('ViewCustomerController',function($scope,$http,$state){
     $state.go('addShippingDefault')
   }
 
+  /**
+    * Show delete customer confirmation with modal
+    *
+  */
+  $scope.confirmDeleteCustomer = function() {
+    $state.go("viewCustomerDeleteConfirmation")
+  }
+  /**
+    * Cancel delete customer and close the modal
+  */
+  $scope.cancelDeleteCustomer = function() {
+    $state.go('viewCustomerDefault')
+  }
+
+  $scope.deleteCustomer = function(id) {
+    $http.delete("http://localhost:444/api/customers/" + id).then(function(){
+      $state.go('defaultState')
+    })
+  }
+
+
 })

@@ -78,6 +78,32 @@ function setAddShippingState($stateProvider) {
   $stateProvider.state(addShippingDefault)
 }
 
+/**
+  * set states for ViewShipping component
+  * @param {object} $stateProvider - to get access to $stateProvider
+*/
+function setViewShippingState($stateProvider) {
+  var viewShippingDefault = {
+    name : 'viewShippingDefault',
+    url : '/pengiriman/lihat'
+  }
+  $stateProvider.state(viewShippingDefault)
+}
+
+function setViewCustomerState($stateProvider) {
+  var viewCustomerDefault = {
+    name : 'viewCustomerDefault',
+    url : '/pelanggan/lihat'
+  }
+  var viewCustomerDeleteConfirmation = {
+    name : 'viewCustomerDeleteConfirmation',
+    url : '/pelanggan/lihat',
+    templateUrl :"/app/components/viewCustomer/deleteConfirmationModal.html" ,
+  }
+  $stateProvider.state(viewCustomerDefault)
+  $stateProvider.state(viewCustomerDeleteConfirmation)
+}
+
 app.config(function($stateProvider){
   var defaultState = {
     name : 'defaultState',
@@ -88,4 +114,6 @@ app.config(function($stateProvider){
   setEditCustomerState($stateProvider)
   setSettingState($stateProvider)
   setAddShippingState($stateProvider)
+  setViewShippingState($stateProvider)
+  setViewCustomerState($stateProvider)
 })

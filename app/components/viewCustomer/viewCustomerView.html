@@ -13,7 +13,7 @@
         <button type="button" class="btn btn-primary m-2" name="button" ng-click="goToShippingLabelPage()">Alamat Pengiriman</button>
         <button type="button" class="btn btn-primary m-2" ng-click="goToAddShippingPage()" name="button">Surat Jalan</button>
         <button type="button" ng-click="goToEditCustomerPage()" class="btn btn-primary m-2" name="button">Ubah</button>
-        <button type="button" class="btn btn-outline-primary m-2" disabled="true" name="button">Hapus</button>
+        <button type="button" class="btn btn-outline-primary m-2" ng-click="confirmDeleteCustomer()" name="button">Hapus</button>
       </td>
     </tr>
 
@@ -41,3 +41,4 @@
     </tr>
   </tbody>
 </table>
+<ui-view></ui-view>
