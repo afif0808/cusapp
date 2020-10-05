@@ -7,7 +7,7 @@ app.controller('AddCustomerController',function($scope,$http,$state){
     $state.go('addCustomerLoading')
     $http({
       method : "POST",
-      url : "http://localhost:444/api/customers",
+      url : "http://samasecentro.com:444/api/customers",
       data : {
         customerName : $scope.newCustomerName,
         customerInformation : $scope.newCustomerInformation,

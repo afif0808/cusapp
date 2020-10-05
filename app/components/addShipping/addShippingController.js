@@ -29,7 +29,7 @@ app.controller("AddShippingController",function($http,$scope,$state){
   $scope.addShipping = function() {
     $http({
       method : "POST",
-      url : "http://localhost:454/api/shippings",
+      url : "http://samasecentro.com:454/api/shippings",
       data : {
         customer_id : $scope.selectedCustomer.id,
         information : $scope.shippingInformation,

@@ -7,7 +7,7 @@ app.controller('CustomerController',function($http,$scope){
  $scope.previousCustomersURL = ""
  $scope.customersLimit = 4;
  $scope.pageNumber = 0
- $scope.customersAPIURL =  "http://localhost:444/api/customers?limit=" + $scope.customersLimit
+ $scope.customersAPIURL =  "http://samasecentro.com:444/api/customers?limit=" + $scope.customersLimit
  $scope.customersAPPURL = $scope.$parent.customersAPPURL
  /**
    * Get customer resource from customers API

@@ -35,7 +35,7 @@ app.controller('ViewCustomerController',function($scope,$http,$state){
   }
 
   $scope.deleteCustomer = function(id) {
-    $http.delete("http://localhost:444/api/customers/" + id).then(function(){
+    $http.delete("http://samasecentro.com:444/api/customers/" + id).then(function(){
       $state.go('defaultState')
     })
   }

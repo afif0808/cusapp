@@ -7,7 +7,7 @@ app.controller('EditCustomerController',function($scope,$http,$state){
     $state.go('editCustomerLoading')
     $http({
       method : "POST",
-      url : "http://localhost:444/api/customers/" + $scope.selectedCustomer.id,
+      url : "http://samasecentro.com:444/api/customers/" + $scope.selectedCustomer.id,
       data : {
         newCustomerName : $scope.selectedCustomer.name,
         newCustomerInformation : $scope.selectedCustomer.information
